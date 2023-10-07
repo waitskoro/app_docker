@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate random number</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #number {
+            font-size: 48px;
+            margin: 20px;
+        }
+        #generate-button {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate random number</h1>
+    <div id="number">0</div>
+    <button id="generate-button">Generate number</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const numberElement = document.getElementById('number');
+            const generateButton = document.getElementById('generate-button');
+
+            generateButton.addEventListener('click', function () {
+               
+                const randomNumber = Math.floor(Math.random() * 100) + 1;
+                numberElement.textContent = randomNumber;
+            });
+        });
+    </script>
+</body>
+</html>
